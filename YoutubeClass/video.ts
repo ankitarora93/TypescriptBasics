@@ -1,64 +1,6 @@
-class Playlist {
-    id: number;
-    name: string;
-    numberOfVideos: number;
-    videoUrls: string[];
-
-    constructor(id: number, name: string, numberOfVideos: number, videoUrls: string[]) {
-        this.id = id;
-        this.name = name;
-        this.numberOfVideos = numberOfVideos;
-        this.videoUrls = videoUrls;
-    }
-}
-
-class User {
-    id: number;
-    name: string;
-    channelName?: string;
-    subscribers?: number;
-    numberOfVideos?: number;
-    playlists?: Playlist[];
-
-    constructor(id: number, name: string, channelName?: string, subscribers?: number, numberOfVideos?: number, playlists?: Playlist[]) {
-        this.id = id;
-        this.name = name;
-        if(channelName) {
-            this.channelName = channelName;
-        }
-
-        if(subscribers) {
-            this.subscribers = subscribers;
-        }
-
-        if(numberOfVideos) {
-            this.numberOfVideos = numberOfVideos;
-        }
-
-        if(playlists) {
-            this.playlists = playlists;
-        }
-    }
-}
-
-class Comments {
-    commentor: User;
-    commentBody: string;
-    date: Date;
-    upvotes: number;
-    downvotes: number;
-    spam: boolean;
-
-    constructor(commentor: User, commentBody: string, date: Date, upvotes: number, downvotes: number, spam: boolean) {
-        this.commentor = commentor;
-        this.commentBody = commentBody;
-        this.date = date;
-        this.upvotes = upvotes;
-        this.downvotes = downvotes;
-        this.spam = spam;
-    }
-}
-
+///<reference path="User.ts" />
+///<reference path="Playlist.ts" />
+///<reference path="Comments.ts" />
 
 class Video {
 

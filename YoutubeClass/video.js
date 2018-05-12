@@ -70,5 +70,8 @@ var Video = /** @class */ (function () {
     Video.prototype.getVideoDetails = function () {
         return this.videoDetails;
     };
+    Video.prototype.getRelatedVideos = function () {
+        console.log("Related Videos List will be displayed here.");
+    };
     return Video;
 }());

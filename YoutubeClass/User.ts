@@ -1,10 +1,10 @@
 class User {
     id: number;
     name: string;
-    channelName?: string;
-    subscribers?: number;
-    numberOfVideos?: number;
-    playlists?: Playlist[];
+    channelName?: string; //channel name, if any
+    subscribers?: number; //number of subscribers, if any
+    numberOfVideos?: number; //number of videos uploaded, if any
+    playlists?: Playlist[]; //number of playlists created, if any
 
     constructor(id: number, name: string, channelName?: string, subscribers?: number, numberOfVideos?: number, playlists?: Playlist[]) {
         this.id = id;

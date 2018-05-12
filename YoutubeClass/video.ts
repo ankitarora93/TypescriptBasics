@@ -3,6 +3,13 @@ class Playlist {
     name: string;
     numberOfVideos: number;
     videoUrls: string[];
+
+    constructor(id: number, name: string, numberOfVideos: number, videoUrls: string[]) {
+        this.id = id;
+        this.name = name;
+        this.numberOfVideos = numberOfVideos;
+        this.videoUrls = videoUrls;
+    }
 }
 
 class User {
@@ -12,15 +19,44 @@ class User {
     subscribers?: number;
     numberOfVideos?: number;
     playlists?: Playlist[];
+
+    constructor(id: number, name: string, channelName?: string, subscribers?: number, numberOfVideos?: number, playlists?: Playlist[]) {
+        this.id = id;
+        this.name = name;
+        if(channelName) {
+            this.channelName = channelName;
+        }
+
+        if(subscribers) {
+            this.subscribers = subscribers;
+        }
+
+        if(numberOfVideos) {
+            this.numberOfVideos = numberOfVideos;
+        }
+
+        if(playlists) {
+            this.playlists = playlists;
+        }
+    }
 }
 
 class Comments {
-    commentor: string;
+    commentor: User;
     commentBody: string;
     date: Date;
     upvotes: number;
     downvotes: number;
     spam: boolean;
+
+    constructor(commentor: User, commentBody: string, date: Date, upvotes: number, downvotes: number, spam: boolean) {
+        this.commentor = commentor;
+        this.commentBody = commentBody;
+        this.date = date;
+        this.upvotes = upvotes;
+        this.downvotes = downvotes;
+        this.spam = spam;
+    }
 }
 
 
@@ -91,7 +127,7 @@ class Video {
         return this.id;
     }
 
-    public getVideoTitle = function(): string {
+    public getVideoTitle(): string {
         return this.videoTitle;
     }
 

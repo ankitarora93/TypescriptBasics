@@ -1,23 +1,8 @@
-var Playlist = /** @class */ (function () {
-    function Playlist() {
-    }
-    return Playlist;
-}());
-var User = /** @class */ (function () {
-    function User() {
-    }
-    return User;
-}());
-var Comments = /** @class */ (function () {
-    function Comments() {
-    }
-    return Comments;
-}());
+///<reference path="User.ts" />
+///<reference path="Playlist.ts" />
+///<reference path="Comments.ts" />
 var Video = /** @class */ (function () {
     function Video(id, videoTitle, videoView, upvotes, downvotes, uploader, videoDetails, comments) {
-        this.getVideoTitle = function () {
-            return this.videoTitle;
-        };
         this.id = id;
         this.videoTitle = videoTitle;
         this.videoView = videoView;
@@ -66,6 +51,9 @@ var Video = /** @class */ (function () {
     };
     Video.prototype.getVideoId = function () {
         return this.id;
+    };
+    Video.prototype.getVideoTitle = function () {
+        return this.videoTitle;
     };
     Video.prototype.getVideoViews = function () {
         return this.videoView;

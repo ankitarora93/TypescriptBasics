@@ -1,6 +1,6 @@
-///<reference path="User.ts" />
-///<reference path="Playlist.ts" />
-///<reference path="Comments.ts" />
+///<reference path="Classes/User.ts" />
+///<reference path="Classes/Playlist.ts" />
+///<reference path="Classes/Comments.ts" />
 var Video = /** @class */ (function () {
     function Video(id, videoTitle, videoView, upvotes, downvotes, uploader, videoDetails, comments) {
         this.id = id;

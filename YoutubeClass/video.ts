@@ -1,6 +1,6 @@
-///<reference path="User.ts" />
-///<reference path="Playlist.ts" />
-///<reference path="Comments.ts" />
+///<reference path="Classes/User.ts" />
+///<reference path="Classes/Playlist.ts" />
+///<reference path="Classes/Comments.ts" />
 
 class Video {
 

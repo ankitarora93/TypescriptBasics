@@ -92,4 +92,8 @@ class Video {
     public getVideoDetails(): string {
         return this.videoDetails;
     }
+
+    public getRelatedVideos() {
+        console.log("Related Videos List will be displayed here.");
+    }
 }

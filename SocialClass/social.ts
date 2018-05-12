@@ -40,6 +40,12 @@ class About {
         }
     }
 
+    public editOtherDetails(about?: string, otherNames?: string, quote?: string) {
+        if(about) { this.otherDetails.setAbout(about); }
+        if(otherNames) { this.otherDetails.setOtherNames(quote); }
+        if(quote) { this.otherDetails.setFavouriteQuote(quote); }
+    }
+
     public getName():string {
         return this.name;
     }
@@ -52,7 +58,7 @@ class About {
 
     public getAddress(): string {
         if(this.address) {
-            return address;
+            return this.address;
         }
     }
 
